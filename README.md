@@ -1,6 +1,6 @@
 # Parcháte Bogotá
 
-Mapa en vivo de parches en Bogotá. Publica tu ubicación con foto y deja que la gente llegue.
+Mapa de parches y spots en Bogotá. Publica tu plan, descubre lugares y encuentra con quién ir.
 
 ## Inicio rápido
 
