@@ -1,0 +1,19 @@
+{
+  "name": "Parcháte Bogotá",
+  "short_name": "Parcháte",
+  "description": "Mapa de parches y spots en Bogotá",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141210",
+  "theme_color": "#9b4545",
+  "orientation": "portrait",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

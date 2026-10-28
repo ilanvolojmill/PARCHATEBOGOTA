@@ -1,0 +1,42 @@
+# Dependencias y builds
+node_modules
+dist
+.vite
+*.tsbuildinfo
+
+# Secretos y entorno
+.env
+.env.*
+!.env.example
+.env*.bak
+*.bak
+*.pem
+*.p12
+*.keystore
+keystore.properties
+google-services.json
+GoogleService-Info.plist
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+.idea
+.vscode
+*.swp
+
+# Hosting / nativo
+.vercel
+.turbo
+android/.gradle
+android/app/build
+android/build
+ios/App/Pods
+ios/App/build
+coverage
+playwright-report
+test-results
+
+# Canvas / temporales locales
+canvases
+*.local

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#141210" />
+    <meta name="description" content="Parcháte Bogotá — mapa de parches y spots en Bogotá. Entra con tu cuenta, crea tu perfil y publica con foto." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Parcháte" />
+    <meta property="og:title" content="Parcháte Bogotá" />
+    <meta property="og:description" content="Parches y spots en Bogotá, claros y fáciles de encontrar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://parchatebogota.app/" />
+    <meta property="og:image" content="https://parchatebogota.app/og.svg" />
+    <meta property="og:locale" content="es_CO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Parcháte Bogotá" />
+    <meta name="twitter:description" content="Parches y spots en Bogotá, claros y fáciles de encontrar." />
+    <meta name="twitter:image" content="https://parchatebogota.app/og.svg" />
+    <link rel="canonical" href="https://parchatebogota.app/" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>Parcháte Bogotá</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("parchexbogota-theme");
+          // Predeterminado: noche. Solo claro si el usuario lo eligió.
+          if (t !== "light") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", "#141210");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+:root {
+  /* —— Bandera Bogotá (tenues) —— */
+  --flag-yellow: #9a8638;
+  --flag-red: #9b4545;
+  --flag-white: #ffffff;
+
+  /* —— Superficies —— */
+  --bg-deep: #f4f2ee;
+  --bg-surface: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.94);
+  --bg-muted: #ebe7e0;
+  --bg-studio: #ddd6c8;
+
+  /* —— Texto (contraste AA sobre fondos claros) —— */
+  --text-primary: #1a1a1a;
+  --text-secondary: #3a3a3a;
+  --text-muted: #55514c;
+
+  /* —— Bordes —— */
+  --border-subtle: rgba(26, 26, 26, 0.1);
+  --border-strong: rgba(26, 26, 26, 0.2);
+
+  /* —— Acentos (rojo escaso; amarillo más escaso) —— */
+  --accent: var(--flag-red);
+  --accent-hot: var(--flag-red);
+  --accent-amber: var(--flag-yellow);
+  --accent-purple: #7a4040;
+  --accent-cyan: #6f6434;
+  --accent-success: #2f5f46;
+  --gradient-brand: var(--flag-red);
+  --toast-error: #7a3030;
+  --map-tile-bg: #e8e4dc;
+
+  /* —— Sombra única —— */
+  --shadow-soft: 0 8px 24px rgba(26, 26, 26, 0.08);
+
+  /* —— Layout shell —— */
+  --phone-w: 402px;
+  --phone-h: 874px;
+  --nav-h: 80px;
+  --topbar-h: 56px;
+
+  /* —— Radios —— */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 8px;
+
+  /* —— Espaciado (base 8) —— */
+  --space: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* —— Tipografía —— */
+  --font: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+  --leading: 1.45;
+  --leading-tight: 1.2;
+
+  /* —— Touch —— */
+  --tap: 44px;
+
+  /* —— Movimiento (HIG: breve, preciso, cancelable) —— */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-micro: 120ms;
+  --dur-enter: 280ms;
+  --dur-exit: 220ms;
+
+  font-family: var(--font);
+  font-size: var(--text-md);
+  line-height: var(--leading);
+  color: var(--text-primary);
+  color-scheme: light;
+}
+
+/* —— Modo noche (Rams + bandera Bogotá tenues) —— */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --flag-yellow: #c4ad4a;
+  --flag-red: #c45c5c;
+  --flag-white: #1a1816;
+
+  --bg-deep: #141210;
+  --bg-surface: #1c1a17;
+  --bg-elevated: #24211d;
+  --bg-glass: rgba(28, 26, 23, 0.94);
+  --bg-muted: #2a2723;
+  --bg-studio: #0c0b0a;
+
+  --text-primary: #f2efe8;
+  --text-secondary: #c8c2b6;
+  --text-muted: #9a9488;
+
+  --border-subtle: rgba(242, 239, 232, 0.1);
+  --border-strong: rgba(242, 239, 232, 0.2);
+
+  --accent: var(--flag-red);
+  --accent-hot: var(--flag-red);
+  --accent-amber: var(--flag-yellow);
+  --accent-purple: #a86868;
+  --accent-cyan: #a8944a;
+  --accent-success: #5a9a72;
+  --gradient-brand: var(--flag-red);
+  --toast-error: #a84848;
+  --map-tile-bg: #1a1816;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.45);
+}

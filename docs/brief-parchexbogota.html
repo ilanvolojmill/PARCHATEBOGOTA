@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>ParchexBogotá — Brief Ejecutivo</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 10.5pt; line-height: 1.55; color: #1a1a2e; background: #fff; }
+.cover { page-break-after: always; min-height: 250mm; display: flex; flex-direction: column; justify-content: center; padding: 40px 0; background: linear-gradient(135deg, #12081f 0%, #261a3d 60%, #1c1030 100%); color: #faf5ff; }
+.cover-badge { font-size: 9pt; letter-spacing: 3px; text-transform: uppercase; color: #22d3ee; margin-bottom: 24px; }
+.cover h1 { font-size: 36pt; font-weight: 800; line-height: 1.1; margin-bottom: 12px; background: linear-gradient(135deg, #ff3366, #a855f7, #ffb800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.cover-sub { font-size: 14pt; color: #c4b5d0; margin-bottom: 40px; max-width: 420px; }
+.cover-meta { font-size: 9pt; color: #8b7a9e; border-top: 1px solid rgba(255,255,255,.15); padding-top: 20px; }
+h2 { font-size: 13pt; color: #12081f; border-left: 4px solid #ff3366; padding-left: 12px; margin: 22px 0 10px; page-break-after: avoid; }
+h3 { font-size: 11pt; color: #a855f7; margin: 14px 0 6px; }
+p { margin-bottom: 8px; color: #333; }
+.lead { font-size: 12pt; color: #444; margin-bottom: 14px; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 9.5pt; }
+th { background: #12081f; color: #faf5ff; padding: 8px 10px; text-align: left; }
+td { padding: 7px 10px; border-bottom: 1px solid #e8e4ef; vertical-align: top; }
+tr:nth-child(even) td { background: #f8f6fc; }
+ul { margin: 6px 0 12px 20px; }
+li { margin-bottom: 4px; }
+.box { background: #f8f6fc; border: 1px solid #e8e4ef; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+.box strong { color: #12081f; }
+.tagline { font-size: 13pt; font-weight: 700; color: #ff3366; text-align: center; margin: 24px 0; padding: 16px; border: 2px solid #ff3366; border-radius: 8px; }
+.footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #e8e4ef; font-size: 8pt; color: #888; text-align: center; }
+.section { page-break-inside: avoid; }
+.toc { page-break-after: always; padding-top: 20px; }
+.toc h2 { border: none; padding: 0; margin-bottom: 16px; }
+.toc ol { list-style: none; counter-reset: toc; padding: 0; }
+.toc li { counter-increment: toc; padding: 6px 0; border-bottom: 1px dotted #ccc; font-size: 10pt; }
+.toc li::before { content: counter(toc) ". "; font-weight: 700; color: #ff3366; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-badge">Brief ejecutivo de producto</div>
+  <h1>ParchexBogotá</h1>
+  <p class="cover-sub">Plataforma digital de descubrimiento y publicación geolocalizada de experiencias urbanas en Bogotá.</p>
+  <p class="cover-meta">Documento informativo · Mayo 2026 · Confidencial<br/>parchexbogota.com · v2.0.0</p>
+</div>
+
+<div class="toc">
+  <h2>Índice</h2>
+  <ol>
+    <li>Propuesta de valor</li>
+    <li>Contexto y oportunidad de mercado</li>
+    <li>Arquitectura del producto</li>
+    <li>Experiencia de usuario</li>
+    <li>Diferenciación competitiva</li>
+    <li>Segmentos objetivo</li>
+    <li>Madurez tecnológica</li>
+    <li>Visión estratégica</li>
+    <li>Síntesis</li>
+  </ol>
+</div>
+
+<section class="section">
+<h2>1. Propuesta de valor</h2>
+<p class="lead"><strong>ParchexBogotá</strong> integra en un único ecosistema dos verticales — <strong>parches</strong> (eventos efímeros en tiempo real) y <strong>spots</strong> (lugares de interés persistente) — con mapa interactivo, perfiles verificados y moderación de comunidad.</p>
+<div class="box"><strong>Definición operativa:</strong> el estándar de referencia para localizar, validar y acceder a planes y lugares en Bogotá, sustituyendo la fragmentación en redes sociales y mensajería instantánea.</div>
+</section>
+
+<section class="section">
+<h2>2. Contexto y oportunidad de mercado</h2>
+<p>La coordinación de planes en Bogotá depende de canales informales (Instagram, WhatsApp), lo que genera fricción sistemática:</p>
+<table>
+<tr><th>Limitación</th><th>Impacto</th></tr>
+<tr><td>Información geográfica dispersa</td><td>Pérdida de asistencia y abandono del plan</td></tr>
+<tr><td>Sin caducidad del contenido</td><td>Recomendaciones y mapas obsoletos</td></tr>
+<tr><td>Recomendaciones no estructuradas</td><td>Baja reutilización del conocimiento local</td></tr>
+<tr><td>Identidad no verificada</td><td>Riesgo reputacional y de seguridad</td></tr>
+</table>
+<p>ParchexBogotá responde con infraestructura de producto: datos geoespaciales, reglas de expiración, perfiles auditables y gobernanza de comunidad.</p>
+</section>
+
+<section class="section">
+<h2>3. Arquitectura del producto</h2>
+<h3>Vertical 1 — Parches (tiempo real)</h3>
+<p>Contenido de <strong>vida útil de 8 horas</strong>: ubicación GPS, evidencia fotográfica, taxonomía de experiencia y metadatos del anfitrión. Convierte la intención inmediata en acción medible (navegación, asistencia, interacción).</p>
+<p><strong>Taxonomía:</strong> rumba · rooftop · after · cultural · picnic</p>
+<h3>Vertical 2 — Spots (descubrimiento)</h3>
+<p>Inventario colaborativo de lugares con valor recurrente. Curación por descarte/selección y contribución por usuarios verificados. Capitaliza el conocimiento local en un activo persistente.</p>
+<p><strong>Parches = urgencia. Spots = descubrimiento.</strong></p>
+</section>
+
+<section class="section">
+<h2>4. Experiencia de usuario</h2>
+<p>Flujo <strong>mobile-first</strong>, orientado a decisión rápida:</p>
+<ul>
+<li><strong>Visualización</strong> — Mapa de Bogotá con actividad en tiempo real</li>
+<li><strong>Evaluación</strong> — Ficha con imagen, distancia, tiempo restante e identidad</li>
+<li><strong>Acción</strong> — Navegación (Google Maps / Waze), asistencia, mensajería</li>
+<li><strong>Descubrimiento</strong> — Módulo Spots para exploración y guardado</li>
+<li><strong>Identidad</strong> — Verificación facial y sello de perfil validado</li>
+<li><strong>Distribución</strong> — Enlaces compartibles para WhatsApp e Instagram</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>5. Diferenciación competitiva</h2>
+<table>
+<tr><th>Dimensión</th><th>Redes + chat</th><th>ParchexBogotá</th></tr>
+<tr><td>Temporalidad</td><td>Sin caducidad explícita</td><td>Parches con TTL de 8 h</td></tr>
+<tr><td>Geolocalización</td><td>Texto o enlace externo</td><td>Pin nativo + navegación integrada</td></tr>
+<tr><td>Conocimiento local</td><td>Publicación aislada</td><td>Base estructurada de spots</td></tr>
+<tr><td>Confianza</td><td>Cuenta no verificada</td><td>Verificación previa a publicar</td></tr>
+<tr><td>Gobernanza</td><td>Sin moderación central</td><td>Reportes, bloqueos, administración</td></tr>
+</table>
+<p><strong>Posicionamiento:</strong> complementa la capa social con capa operativa (mapa, datos, reglas, persistencia).</p>
+</section>
+
+<section class="section">
+<h2>6. Segmentos objetivo</h2>
+<table>
+<tr><th>Segmento</th><th>Necesidad cubierta</th></tr>
+<tr><td>Usuario final</td><td>Planes confiables y accesibles el mismo día</td></tr>
+<tr><td>Contribuidor / curador</td><td>Canal para publicar lugares con reputación</td></tr>
+<tr><td>Comunidades y medios locales</td><td>Engagement más allá del feed</td></tr>
+<tr><td>Comercios y marcas</td><td>Presencia en el punto de decisión (fase posterior)</td></tr>
+</table>
+</section>
+
+<section class="section">
+<h2>7. Madurez tecnológica</h2>
+<p>Producto en <strong>versión 2.0.0</strong>, listo para entorno productivo:</p>
+<ul>
+<li>Aplicación web (PWA) y empaquetado nativo Android (Capacitor)</li>
+<li>Backend: autenticación multi-proveedor, base relacional, storage, tiempo real (Supabase)</li>
+<li>Mensajería, push notifications, moderación y cumplimiento Ley 1581/2012 (Colombia)</li>
+<li>CI/CD y pruebas automatizadas (12 tests, build OK)</li>
+</ul>
+<div class="box"><strong>Estado:</strong> apto para despliegue con usuarios reales. No es prototipo visual ni POC aislado.</div>
+</section>
+
+<section class="section">
+<h2>8. Visión estratégica</h2>
+<p>Consolidar ParchexBogotá como <strong>infraestructura de la vida nocturna y cultural de Bogotá</strong>: dónde ocurre el plan ahora, qué lugares sostienen valor en el tiempo y quién publica con identidad verificable.</p>
+<p>La métrica de éxito es la <strong>tasa de conversión de descubrimiento a presencia física</strong> en la ciudad.</p>
+</section>
+
+<section class="section">
+<h2>9. Síntesis</h2>
+<table>
+<tr><th>Elemento</th><th>Descripción</th></tr>
+<tr><td>Qué es</td><td>Plataforma de mapa en vivo para parches y spots en Bogotá</td></tr>
+<tr><td>Para qué</td><td>Reducir fricción entre descubrimiento y asistencia</td></tr>
+<tr><td>Cómo</td><td>Geolocalización, caducidad, verificación y moderación</td></tr>
+<tr><td>Estado</td><td>Producto construido; listo para escalar</td></tr>
+</table>
+<p class="tagline">ParchexBogotá — La capa digital de los planes y los lugares en Bogotá.</p>
+</section>
+
+<div class="footer">Documento informativo. Sin obligaciones comerciales ni condiciones de asociación. · ParchexBogotá © 2026</div>
+</body>
+</html>
