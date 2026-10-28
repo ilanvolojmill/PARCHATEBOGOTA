@@ -164,39 +164,32 @@ Checklist:
 
 ---
 
-## Paso 7 — Publicar en Vercel (la web en internet)
+## Paso 7 — Publicar en Netlify (la web en internet)
 
-1. Entra a [vercel.com](https://vercel.com) con la misma cuenta de GitHub
-2. **Add New → Project** → elige el repo `parchexbogota`
-3. Configuración:
-   - **Root Directory:** `apps/web` (Importante: pulsa *Edit*)
-   - Framework: Vite (sale solo)
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-4. **Environment Variables** (Production y Preview):
+1. Entra a [https://app.netlify.com](https://app.netlify.com) con GitHub (**ilanvolojmill**)
+2. **Add new site → Import an existing project → GitHub** → **PARCHATEBOGOTA**
+3. Netlify lee `netlify.toml` (base `apps/web`, build `npm run build`, carpeta `dist`)
+4. **Environment variables** (Add environment variables):
 
 | Nombre | Valor |
 |--------|--------|
-| `VITE_SUPABASE_URL` | tu Project URL de Supabase |
-| `VITE_SUPABASE_ANON_KEY` | tu anon key |
-| `VITE_APP_URL` | `https://parchatebogota.app` (o la URL `.vercel.app` mientras no tengas dominio) |
+| `VITE_SUPABASE_URL` | `https://efxqlizbpbqaajhrywdg.supabase.co` |
+| `VITE_SUPABASE_ANON_KEY` | tu clave `sb_publishable_…` o anon |
+| `VITE_APP_URL` | la URL que te dé Netlify (`https://algo.netlify.app`) |
 
 5. **Deploy**
-6. Cuando termine, abre la URL `https://algo.vercel.app`
-
-Si ves “La app no puede arrancar…”, las variables no se guardaron o no redesplegaste. En Vercel: Settings → Environment Variables → Redeploy.
+6. Si las variables se pusieron después, **Deploys → Trigger deploy → Clear cache and deploy site**
 
 ### Conectar el dominio `parchatebogota.app`
-1. En Vercel: Project → **Domains** → añade `parchatebogota.app` y `www.parchatebogota.app`
-2. En tu registrador de dominio, pon los DNS que Vercel te indique (A / CNAME)
-3. Cuando HTTPS esté verde, vuelve a Supabase **URL Configuration** y deja Site URL = `https://parchatebogota.app`
-4. En Google OAuth no cambies el callback: sigue siendo `https://TU_REF.supabase.co/auth/v1/callback`
+1. Netlify → Site → **Domain management** → añade `parchatebogota.app`
+2. En el registrador, pon los DNS que Netlify indique
+3. En Supabase **URL Configuration**, Site URL = `https://parchatebogota.app` y añade también `https://TU-SITIO.netlify.app`
 
 Checklist:
 - [ ] Deploy en verde
 - [ ] La web abre en el celular
 - [ ] Login Google funciona **en la URL pública**
-- [ ] Dominio con candado HTTPS (o al menos `.vercel.app` para una beta)
+- [ ] Dominio con candado HTTPS (o al menos `.netlify.app` para una beta)
 
 ---
 

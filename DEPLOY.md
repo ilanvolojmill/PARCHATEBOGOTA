@@ -21,9 +21,16 @@ La carpeta `dist/` contiene la app lista para subir.
 
 ## Netlify
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Agrega `_redirects` con: `/* /index.html 200`
+1. Importa el repo en [netlify.com](https://netlify.com) (GitHub → PARCHATEBOGOTA)
+2. El archivo `netlify.toml` en la raíz ya define:
+   - Base: `apps/web`
+   - Build: `npm run build`
+   - Publish: `dist`
+3. Variables (Site settings → Environment variables):
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_APP_URL` (la URL de Netlify o `https://parchatebogota.app`)
+4. Deploy. Si las variables se añadieron después del primer build, **Trigger deploy**.
 
 ## Preview local
 
