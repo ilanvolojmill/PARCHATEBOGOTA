@@ -8,7 +8,7 @@ const DOCS: Record<LegalDoc, { title: string; body: string[] }> = {
     body: [
       "Tratamos solo lo necesario para la cuenta y el mapa: nombre, correo, usuario, foto de perfil, lo que publicas y, si la activas, una ubicación aproximada.",
       "No vendemos datos ni usamos cookies de publicidad. La cédula solo se pide si quieres publicar, y la procesa Didit.",
-      "Puedes consultar, corregir, revocar y suprimir tus datos en privacidad@parchexbogota.app o desde Perfil.",
+      "Puedes consultar, corregir, revocar y suprimir tus datos en ivolojsavdie@gmail.com o desde Perfil.",
       "La política completa, Ley 1581 de 2012, está en la página pública de privacidad.",
     ],
   },
@@ -21,7 +21,7 @@ const DOCS: Record<LegalDoc, { title: string; body: string[] }> = {
       "Eres responsable de tu seguridad al asistir a parches. Parcháte Bogotá no organiza eventos.",
       "Nos reservamos el derecho de eliminar contenido reportado o que viole estas normas.",
       "Solo puedes publicar parches o spots si Didit verificó tu cédula. El sello de selfie de perfil no sustituye esa verificación.",
-      "Para soporte: hola@parchexbogota.app",
+      "Para soporte: ivolojsavdie@gmail.com",
     ],
   },
 };

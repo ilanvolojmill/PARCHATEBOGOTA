@@ -209,8 +209,7 @@ Checklist:
 ## Paso 9 — Correo (recomendado)
 
 En tu dominio (por ejemplo Google Workspace o el correo del registrador) crea:
-- `hola@parchexbogota.app`
-- `privacidad@parchexbogota.app`
+- `ivolojsavdie@gmail.com`
 
 Las páginas públicas ya están:
 - https://parchatebogota.app/privacidad.html

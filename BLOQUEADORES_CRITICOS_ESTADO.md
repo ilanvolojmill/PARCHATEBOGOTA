@@ -60,7 +60,7 @@ update public.profiles set is_admin = true where handle = 'TU_HANDLE.bog';
 ### Opcional / después
 - [ ] KYC real (Truora/Onfido/Veriff) si quieres sello de identidad legal
 - [ ] Abogado Ley 1581
-- [ ] Emails `hola@` / `privacidad@`
+- [ ] Contacto: `ivolojsavdie@gmail.com`
 - [ ] Screenshots + icono 1024 para tiendas
 - [ ] Edge Function `delete-account` para borrar también `auth.users`
 

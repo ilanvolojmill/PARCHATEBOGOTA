@@ -11,7 +11,7 @@ export function BannedScreen() {
           Tu cuenta fue suspendida por incumplir las normas de la comunidad.
         </p>
         <p className="config-error-detail">
-          Si crees que es un error, escribe a hola@parchexbogota.app
+          Si crees que es un error, escribe a ivolojsavdie@gmail.com
         </p>
         <button type="button" className="btn btn-primary btn-full" onClick={() => signOut()}>
           Cerrar sesión

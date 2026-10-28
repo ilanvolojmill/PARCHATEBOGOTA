@@ -3,6 +3,7 @@ import { useParche } from "../context/ParcheContext";
 import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 import { formatTimeAgo, getDirectionsUrl, getWazeUrl } from "../lib/geo";
+import { openPrivacyPolicy } from "../lib/legalUrl";
 import { VerifiedBadge } from "../components/VerifiedBadge";
 import { Icons } from "../components/Icons";
 
@@ -27,7 +28,7 @@ export function ProfileScreen() {
       await deleteAccount();
       await signOut();
     } catch {
-      alert("No se pudo eliminar la cuenta. Escribe a privacidad@parchexbogota.app");
+      alert("No se pudo eliminar la cuenta. Escribe a ivolojsavdie@gmail.com");
     } finally {
       setDeleting(false);
     }
@@ -52,24 +53,28 @@ export function ProfileScreen() {
         </div>
         <div className="profile-data">
         <h3 className="section-title profile-web-only">Datos de usuario</h3>
-        {profile.verified ? (
+        {profile.identityStatus === "verified" ? (
           <span className="verified-status verified-status-ok">
-            <Icons.Shield /> Selfie confirmada
+            <Icons.Shield /> Cédula verificada por Didit · puedes publicar
           </span>
         ) : (
-          <button type="button" className="verify-cta" onClick={openEditProfile}>
-            <Icons.Shield /> Confirmar selfie para publicar
+          <button type="button" className="verify-cta" onClick={openIdentity}>
+            <Icons.Shield /> Verificar cédula para publicar
           </button>
         )}
         <p className="profile-selfie-note">
-          El sello de selfie es foto de perfil. La cédula se verifica aparte con un proveedor KYC.
+          {profile.identityStatus === "pending"
+            ? "Didit está confirmando tu cédula. Mientras tanto no puedes publicar."
+            : "La selfie de perfil no basta. Para publicar, Didit tiene que aprobar la cédula."}
         </p>
         <button type="button" className="settings-btn" onClick={openIdentity}>
           {profile.identityStatus === "verified"
-            ? "Identidad verificada (cédula)"
+            ? "Ver ficha de identidad"
             : profile.identityStatus === "pending"
-              ? "Verificación de cédula en proceso…"
-              : "Verificar identidad con cédula"}
+              ? "Cédula en revisión…"
+              : profile.identityStatus === "rejected"
+                ? "Reintentar con Didit"
+                : "Verificar identidad con cédula"}
         </button>
         {remoteMode && <p className="remote-badge">En vivo</p>}
         {offlineQueueCount > 0 && (
@@ -216,7 +221,7 @@ export function ProfileScreen() {
         <button type="button" className="settings-btn" onClick={() => void exportMyData()}>
           Exportar mis datos (ARCO)
         </button>
-        <button type="button" className="settings-btn" onClick={() => openLegal("privacy")}>
+        <button type="button" className="settings-btn" onClick={openPrivacyPolicy}>
           Política de privacidad
         </button>
         <button type="button" className="settings-btn" onClick={() => openLegal("terms")}>

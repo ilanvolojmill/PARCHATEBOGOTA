@@ -102,7 +102,7 @@ update public.profiles set is_admin = true where handle = 'tu.handle.bog';
 
 ### G. Legal / ops (tú)
 - Revisar textos con abogado (Colombia / Ley 1581)
-- Emails `hola@` y `privacidad@`
+- Contacto: `ivolojsavdie@gmail.com`
 - Screenshots, icono 1024, feature graphic
 - Decidir si más adelante contratas KYC real (Truora/Onfido/Veriff)
 

@@ -150,7 +150,7 @@ La verificación actual es **simulada** (selfie + ID local). Para KYC real en Co
 Antes de publicar:
 - Revisa textos en `LegalSheet.tsx` con un abogado
 - Registra tratamiento de datos ante la SIC si aplica (Ley 1581/2012)
-- Emails sugeridos: `hola@`, `privacidad@` en tu dominio
+- Contacto actual: `ivolojsavdie@gmail.com`
 
 ---
 
