@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { openPrivacyPolicy } from "../lib/legalUrl";
 
 const KEY = "parchexbogota-cookies";
 
@@ -15,11 +16,13 @@ export function CookieBanner() {
   return (
     <aside className="cookie-banner" role="dialog" aria-label="Cookies">
       <p>
-        Usamos cookies y almacenamiento local para la app, analytics (Plausible/Mixpanel) y mejorar tu experiencia.
-        Al continuar aceptas nuestra política de privacidad.
+        Guardamos la sesión en este dispositivo. No usamos cookies de publicidad.{" "}
+        <button type="button" className="text-btn" onClick={openPrivacyPolicy}>
+          Ver la política de privacidad
+        </button>
       </p>
       <button type="button" className="btn btn-primary compact" onClick={accept}>
-        Aceptar
+        Entendido
       </button>
     </aside>
   );

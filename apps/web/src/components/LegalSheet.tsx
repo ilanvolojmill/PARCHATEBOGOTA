@@ -6,15 +6,10 @@ const DOCS: Record<LegalDoc, { title: string; body: string[] }> = {
   privacy: {
     title: "Política de privacidad",
     body: [
-      "Parcháte Bogotá recopila tu nombre, usuario, foto de perfil, selfie de confirmación, ubicación GPS y fotos que subes de parches y spots.",
-      "Usamos estos datos para mostrar contenido en el mapa, moderar la comunidad y mejorar la experiencia en Bogotá.",
-      "La selfie confirma que hay una foto de persona en el perfil. NO es una verificación de identidad gubernamental (KYC) ni biometría certificada, salvo que se integre un proveedor externo en el futuro.",
-      "Las selfies se almacenan en un bucket privado (no público). Las fotos de parches/spots pueden ser públicas en el mapa.",
-      "Tus datos se almacenan en servidores (Supabase) en cumplimiento de la Ley 1581 de 2012 (Colombia).",
-      "Puedes exportar tus datos desde Perfil → Exportar mis datos (ARCO) y eliminar tu cuenta desde Perfil → Eliminar cuenta, o escribir a privacidad@parchexbogota.app",
-      "Derechos ARCO (Colombia): acceso, rectificación, cancelación y oposición. Contacto: privacidad@parchexbogota.app",
-      "No vendemos tus datos personales a terceros.",
-      "Última actualización: agosto 2026.",
+      "Tratamos solo lo necesario para la cuenta y el mapa: nombre, correo, usuario, foto de perfil, lo que publicas y, si la activas, una ubicación aproximada.",
+      "No vendemos datos ni usamos cookies de publicidad. La cédula solo se pide si quieres publicar, y la procesa Didit.",
+      "Puedes consultar, corregir, revocar y suprimir tus datos en privacidad@parchexbogota.app o desde Perfil.",
+      "La política completa, Ley 1581 de 2012, está en la página pública de privacidad.",
     ],
   },
   terms: {
@@ -25,7 +20,7 @@ const DOCS: Record<LegalDoc, { title: string; body: string[] }> = {
       "Está prohibido publicar contenido falso, ilegal, que incite violencia o acoso.",
       "Eres responsable de tu seguridad al asistir a parches. Parcháte Bogotá no organiza eventos.",
       "Nos reservamos el derecho de eliminar contenido reportado o que viole estas normas.",
-      "El sello de selfie confirmada es un mecanismo de confianza comunitario; no garantiza la conducta de usuarios ni sustituye identificación oficial.",
+      "Solo puedes publicar parches o spots si Didit verificó tu cédula. El sello de selfie de perfil no sustituye esa verificación.",
       "Para soporte: hola@parchexbogota.app",
     ],
   },
